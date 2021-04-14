@@ -1,0 +1,80 @@
+// ---------- variables ----------
+
+$backgroundGreyElements: #F3F3F3;
+$backgroundGreyElementsHover: #b3b3b3;
+$backgroundButton: #E83948;
+$backgroundButtonHover: #2F9DA5;
+$HoverLiElement: #062E3E;
+
+// ---------- mixins ----------
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin flex($flex-direction, $justify-content, $align-items, $flex-wrap){
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-wrap: $flex-wrap;
+}
+
+@mixin adaptiveFormula ($attribute, $min-size, $max-size) {
+  #{$attribute}: calc(#{$min-size + px} + (#{$max-size} - #{$min-size}) * ((100vw - 414px) / (1920 - 414)));
+}
+
+@mixin h2-span ($color) {
+  span {
+    display: inline-block;
+    @include adaptiveFormula(width, 65, 88);
+    border-bottom: 3px solid $color;
+  }
+}
+
+@mixin h2-bigLine ($color) {
+  position: relative;
+  @include adaptiveFormula(margin-bottom, 20, 40);
+  margin-top: 30px;
+  text-transform: uppercase;
+
+  &:before {
+    content: '';
+    @include size(100%, 2px);
+    background: #EAEAEA;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  span {
+    display: inline;
+    width: auto;
+    border: none;
+    position: relative;
+
+    &:before {
+      content: '';
+      @include size(100%, 2px);
+      background: $color;
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      z-index: 5;
+    }
+  }
+}
+
+// ---------- templates ----------
+
+%button {
+  @include size(180px, 42px);
+  @include flex(row, center, center, nowrap);
+  font-family: lato, serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  transition: 0.5s;
+}

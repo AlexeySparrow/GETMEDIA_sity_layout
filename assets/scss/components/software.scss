@@ -1,0 +1,156 @@
+@import "variables";
+
+/* software */
+
+.software__menu {
+  .dropdown {
+    position: relative;
+
+    &:before {
+      content: '';
+      @include size(100%, 2px);
+      background: #EAEAEA;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    button {
+      position: relative;
+
+      &:before {
+        content: '';
+        @include size(100%, 2px);
+        background: $backgroundButton;
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        z-index: 5;
+      }
+    }
+  }
+
+  .btn-secondary {
+    padding-left: 0;
+    color: #2D2A2A;
+    background: none;
+    border: none;
+    border-radius: 0;
+
+    &:active,
+    &:focus {
+      box-shadow: none;
+    }
+ }
+
+  .dropdown-menu {
+    width: auto;
+    .dropdown-item {
+      font-size: 13px;
+      padding: 15px;
+    }
+  }
+}
+
+.software__banner {
+  width: 1200px;
+  background: url("img/software/banner.png") no-repeat center;
+  background-size: cover;
+  object-fit: cover;
+  position: relative;
+  @include adaptiveFormula(padding-top, 30, 116);
+  @include adaptiveFormula(padding-bottom, 34, 165);
+  margin: 0 auto;
+
+  h2 {
+    @include adaptiveFormula(font-size, 38, 46);
+    @include adaptiveFormula(line-height, 52, 56);
+    color: #fff;
+  }
+
+  p {
+    color: #fff;
+  }
+
+  a {
+    @extend %button;
+    color: #fff;
+    background: $backgroundButton;
+
+    &:hover {
+      background: $backgroundButtonHover;
+    }
+  }
+}
+
+.software__title {
+  @include adaptiveFormula(margin-top, 20, 50);
+  @include adaptiveFormula(margin-bottom, 15, 30);
+
+  span {
+    display: inline-block;
+    @include adaptiveFormula(width, 65, 88);
+    border-bottom: 3px solid $backgroundButton;
+  }
+}
+
+.software__cardProduct {
+  @include size(100%, 100%);
+  margin: 0;
+  box-shadow: 0px 2px 2px rgba(183, 189, 199, 0.25),
+  0px 4px 4px rgba(183, 189, 199, 0.25),
+  0px 4px 30px rgba(183, 189, 199, 0.1);
+
+  h2 {
+    @include adaptiveFormula(font-size, 14, 24);
+    @include adaptiveFormula(line-height, 16, 33);
+  }
+
+  p {
+    @include adaptiveFormula(font-size, 14, 18);
+    @include adaptiveFormula(line-height, 16, 25);
+    color: $backgroundButton;
+  }
+
+  img {
+    object-fit: contain;
+  }
+
+  .href {
+    display: flex;
+
+    a {
+      @extend %button;
+      transition: 0.25s;
+
+      &:nth-child(1) {
+        background: $backgroundGreyElements;
+        color: #2D2A2A;
+        margin-right: 10px;
+
+        &:hover {
+          background: $backgroundGreyElementsHover;
+        }
+      }
+
+      &:nth-child(2) {
+        @include size(42px, 42px);
+        background: $backgroundButtonHover;
+
+        &:hover {
+          background: $backgroundButton;
+        }
+      }
+    }
+  }
+}
+
+.software__loading {
+
+  a {
+    color: $backgroundButton;
+    text-decoration: underline;
+  }
+}
+
+/* -------- */

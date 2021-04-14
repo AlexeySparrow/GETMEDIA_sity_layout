@@ -1,0 +1,22 @@
+/* loading fonts */
+/* ubuntu */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+/* lato */
+
+@font-face {
+  font-family: lato;
+  font-weight: 400;
+  src: url(fonts/lato.regular.ttf);
+}
+@font-face {
+  font-family: lato;
+  font-weight: 500;
+  src: url(fonts/lato.medium.ttf);
+}
+@font-face {
+  font-family: lato;
+  font-weight: 700;
+  src: url(fonts/lato.bold.ttf);
+}
+
+/* ------------- */

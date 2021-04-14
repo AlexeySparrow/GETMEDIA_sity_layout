@@ -1,0 +1,51 @@
+@import "variables";
+
+/* industry solution */
+
+.industrySolution {
+
+  li {
+    width: 49%;
+    @include adaptiveFormula(margin-top, 10, 30);
+    @include adaptiveFormula(margin-bottom, 10, 30);
+    transition: 0.25s;
+
+    background: $backgroundGreyElements;
+
+    a {
+      @include size(100%, 100%);
+      @include flex(column, flex-start, flex-start, nowrap);
+      @include adaptiveFormula(padding, 32, 40);
+
+      svg {
+        color: $backgroundButtonHover;
+        margin-bottom: 30px;
+      }
+
+      h2 {
+        @include adaptiveFormula(font-size, 24, 26);
+        margin-bottom: 18px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+    }
+
+    &:hover {
+      background: $HoverLiElement;
+
+      a {
+        h2, p {
+          color: #fff;
+        }
+
+        svg {
+          color: $backgroundButton;
+        }
+      }
+    }
+  }
+}
+
+/* ----------------- */

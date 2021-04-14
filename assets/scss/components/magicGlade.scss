@@ -1,0 +1,98 @@
+@import "variables";
+
+/* magic glade */
+
+.magicGlade__price {
+  display: flex;
+  margin: 30px 0 30px 0;
+  border-bottom: 2px solid $backgroundButtonHover;
+
+  a {
+    @extend %button;
+    @include adaptiveFormula(margin-right, 34, 40);
+    background: $backgroundGreyElements;
+    transition: 0.25s;
+    color: #2D2A2A;
+
+    &:hover {
+      background: $backgroundGreyElementsHover;
+    }
+  }
+
+  p {
+    @include adaptiveFormula(font-size, 18, 32);
+    @include adaptiveFormula(line-height, 21, 38);
+    color: $backgroundButton;
+    font-weight: 700;
+  }
+}
+
+.magicGlade__pay {
+  h2 {
+    font-size: 30px;
+    line-height: 34px;
+    font-weight: 500;
+  }
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.magicGlade-pay__button {
+  display: flex;
+  margin-bottom: 30px;
+
+  a {
+    @extend %button;
+
+    &:nth-child(1) {
+      background: $backgroundButton;
+      transition: 0.25s;
+      color: #fff;
+      margin-right: 34px;
+
+      &:hover {
+        background: $backgroundButtonHover;
+      }
+    }
+
+    &:nth-child(2) {
+      background: $backgroundGreyElements;
+      transition: 0.25s;
+      color: #2D2A2A;
+
+      &:hover {
+        background: $backgroundGreyElementsHover;
+      }
+    }
+  }
+}
+
+.magicGlade__functions {
+  padding-bottom: 20px;
+
+  h2 {
+    @include h2-span($backgroundButtonHover);
+    margin-bottom: 20px;
+  }
+}
+
+.magicGlade-pay__toggle-carousel {
+  display: none;
+
+  button {
+    width: 10px!important;
+    height: 10px!important;
+    border-radius: 50%;
+    background: black!important;
+    border: none!important;
+  }
+
+  .carousel-indicators {
+    padding: 10px 0 10px 0;
+    bottom: -50px;
+  }
+}
+
+/* ----------- */

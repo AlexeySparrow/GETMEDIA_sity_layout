@@ -1,0 +1,244 @@
+@import "variables";
+
+/* interactive museum */
+
+.interactiveMuseum__banner {
+  width: 1200px;
+  background: url('img/interMuseum/Rectangle592.png') no-repeat center;
+  background-size: cover;
+  object-fit: cover;
+  position: relative;
+  @include adaptiveFormula(padding-top, 30, 116);
+  @include adaptiveFormula(padding-bottom, 34, 165);
+  margin: 0 auto;
+
+  h2 {
+    @include adaptiveFormula(font-size, 38, 46);
+    @include adaptiveFormula(line-height, 52, 56);
+    color: #fff;
+  }
+
+  p {
+    color: #fff;
+  }
+
+  a {
+    @extend %button;
+    color: #fff;
+    background: $backgroundButton;
+
+    &:hover {
+      background: $backgroundButtonHover;
+    }
+  }
+}
+
+.interactiveMuseum__capabilities {
+  h2 {
+    @include h2-span($backgroundButtonHover);
+  }
+
+  .interactiveMuseum-capabilities__img {
+    div {
+      position: relative;
+      margin: 20px 0 20px 0;
+
+      p {
+        max-width: 100%;
+        position: absolute;
+        @include adaptiveFormula(top, 0, 14);
+        left: 15px;
+        padding: 6px 15px 6px 20px;
+        background: rgba(6, 46, 62, 0.4);
+        color: #FFFFFF;
+        @include adaptiveFormula(font-size, 18, 26);
+      }
+
+      img {
+        @include size(100%, 100%);
+        object-fit: cover;
+      }
+    }
+  }
+
+  .interactiveMuseum-capabilities__carousel {
+    display: none;
+
+    p {
+      max-width: 100%;
+      position: absolute;
+      @include adaptiveFormula(top, 0, 14);
+      left: 15px;
+      padding: 6px 15px 6px 20px;
+      background: rgba(6, 46, 62, 0.4);
+      color: #FFFFFF;
+      @include adaptiveFormula(font-size, 18, 26);
+    }
+
+    img {
+      @include size(100%, 100%);
+      object-fit: cover;
+    }
+
+    button {
+      width: 10px!important;
+      height: 10px!important;
+      border-radius: 50%;
+      background: black!important;
+      border: none!important;
+    }
+
+    .carousel-indicators {
+      padding: 10px 0 10px 0;
+      bottom: -50px;
+    }
+
+    .carousel-item {
+      position: relative;
+    }
+  }
+}
+
+.interactiveMuseum__banner-key {
+  background: url('img/interMuseum/Rectangle609.png') no-repeat center;
+  background-size: cover;
+  object-fit: cover;
+  position: relative;
+  @include adaptiveFormula(padding-top, 30, 116);
+  @include adaptiveFormula(padding-bottom, 34, 165);
+  margin: 0 auto;
+
+  h2 {
+    @include adaptiveFormula(font-size, 38, 46);
+    @include adaptiveFormula(line-height, 52, 56);
+    color: #fff;
+  }
+
+  ul {
+    li {
+      color: #fff;
+      text-align: center;
+    }
+  }
+
+  a {
+    @extend %button;
+    color: #fff;
+    background: $backgroundButtonHover;
+
+    &:hover {
+      background: $backgroundButton;
+    }
+  }
+}
+
+.interactiveMuseum__advantages {
+  h2 {
+    @include h2-span($backgroundButtonHover)
+  }
+
+  p {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  li {
+    padding-left: 29px;
+    padding-right: 29px;
+    @include adaptiveFormula(padding-top, 30, 49);
+    @include adaptiveFormula(padding-bottom, 30, 89);
+
+    @include flex(column, center, center, nowrap);
+
+    &:nth-child(1),
+    &:nth-child(3) {
+      border-bottom: 2px solid #F3F3F3;
+    }
+
+    &:nth-child(2) {
+      border: 2px solid #F3F3F3;
+      border-top: none;
+    }
+
+    &:nth-child(5) {
+      border-left: 2px solid #F3F3F3;
+      border-right: 2px solid #F3F3F3;
+    }
+  }
+}
+
+.interactiveMuseum__load {
+  @include flex(row, center, center, nowrap);
+
+  p {
+    margin-left: 10px;
+    font-size: 18px;
+    line-height: 21px;
+    text-decoration-line: underline;
+    color: #E83948;
+  }
+}
+
+.interactiveMuseum__museum-window {
+  background: $backgroundButtonHover;
+  @include adaptiveFormula(padding-top, 50, 81);
+  @include adaptiveFormula(padding-bottom, 50, 36);
+
+  .museum-window__title {
+    @include h2-bigLine($backgroundButton);
+    span {
+      color: #FFFFFF;
+    }
+  }
+}
+
+.museum-window__cards {
+
+  .card-body {
+    padding: 10px;
+  }
+
+  img {
+    width: 100%;
+    @include adaptiveFormula(height, 175, 275);
+    object-fit: cover;
+  }
+
+  h4 {
+    font-family: Ubuntu, serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+  }
+
+  .price {
+    font-weight: 700!important;
+    font-size: 14px!important;
+    line-height: 22px!important;
+    text-align: center;
+    margin-top: 20px;
+    color: $backgroundButton!important;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  a {
+    margin: 0 auto;
+    @extend %button;
+    color: #fff;
+    background: $backgroundButton;
+
+    &:hover {
+      background: $backgroundButtonHover;
+    }
+  }
+}
+
+/* ------------------ */

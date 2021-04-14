@@ -1,0 +1,109 @@
+@import "variables";
+
+/* preschool childcare */
+
+.preschool__section-1 {
+  span {
+    display: inline-block;
+    @include adaptiveFormula(width, 65, 88);
+    border-bottom: 3px solid $backgroundButton;
+  }
+
+  img {
+    margin: 0 0 30px 30px;
+  }
+
+  div {
+    display: flex;
+
+    a {
+      @extend %button;
+
+      &:nth-child(1) {
+        background: $backgroundButton;
+        transition: 0.25s;
+        color: #fff;
+        margin-right: 34px;
+
+        &:hover {
+          background: $backgroundButtonHover;
+        }
+      }
+
+      &:nth-child(2) {
+        background: $backgroundGreyElements;
+        transition: 0.25s;
+        color: #2D2A2A;
+
+        &:hover {
+          background: $backgroundGreyElementsHover;
+        }
+      }
+    }
+  }
+}
+
+.preschool__paragraph {
+  @include adaptiveFormula(margin-top, 37, 40);
+  @include adaptiveFormula(margin-bottom, 37, 40);
+}
+
+.preschool__section-2 {
+  padding-bottom: 30px;
+
+  img {
+    min-height: 420px;
+    object-fit: contain;
+  }
+
+  span {
+    display: inline-block;
+    @include adaptiveFormula(width, 49, 88);
+    border-bottom: 3px solid $backgroundButtonHover;
+  }
+
+  a{
+    @extend %button;
+    background: $backgroundGreyElements;
+    transition: 0.25s;
+    color: #2D2A2A;
+
+    &:hover {
+      background: $backgroundGreyElementsHover;
+    }
+  }
+
+  li div {
+    position: relative;
+    @include adaptiveFormula(margin-bottom, 20, 40);
+    margin-top: 30px;
+
+    &:before {
+      content: '';
+      @include size(100%, 2px);
+      background: #EAEAEA;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    span {
+      display: inline;
+      width: auto;
+      border: none;
+      position: relative;
+
+      &:before {
+        content: '';
+        @include size(100%, 2px);
+        background: $backgroundButton;
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        z-index: 5;
+      }
+    }
+  }
+}
+
+/* -------------------- */
